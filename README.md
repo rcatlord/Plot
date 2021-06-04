@@ -4,5 +4,5 @@ Recreating ONS [Simple-charts](https://github.com/ONSvisual/Simple-charts) in [O
 <br/>
 
 |Chart type | Graphic | Code  |
-|:--- |:--- |:--- |:--- |
+|:--- |:--- |:--- |
 |Column - diverging | [View](https://rcatlord.github.io/Plot/column-diverging) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-diverging) |
