@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Diverging column chart</title>
+		<meta charset="UTF-8" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../lib/globalStyle.css" />
+		<style></style>
+		<script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.1"></script>
+	</head>
+	<body>
+
+		<div id="graphic" aria-hidden="true"></div>
+		<h6 id="source"></h6>
+
+		<script>
+		
+		d3.csv("data.csv", d3.autoType)
+			.then(data => {
+				console.log(data[0]);
+				var options = {
+					marginLeft: 20,
+					height: 400,
+					width: 640,
+					x: {
+						ticks: d3.ticks(...d3.extent(data, d => d.date), 14),
+						label: null
+					}, 
+					y: {
+						domain: [-3, 6],
+						tickSize: 0,
+    					tickPadding: 3,
+						grid: true,
+						label: "%"
+					},
+					color: {
+						range: ["#118C7B", "#206095"]
+					},
+					marks: [
+                    	Plot.barY(data, {
+							x: "date", 
+							y: "value", 
+							fill: d => [d.value > 0 ? 1 : 0], 
+							title: "value"
+						}),
+						Plot.ruleY([0]),
+						Plot.ruleY([-3])
+					]
+				};
+				document.getElementById('graphic').appendChild(Plot.plot(options));
+			});
+
+		d3.select("#source")
+			.text("Source: Labour Market Statistics, February 2015, Table A02");
+            
+    </script>
+	</body>
+</html>
