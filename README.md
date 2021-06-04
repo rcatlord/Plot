@@ -3,6 +3,6 @@ Recreating ONS [Simple-charts](https://github.com/ONSvisual/Simple-charts) in [O
 
 <br/>
 
-|Chart type | &nbsp; | Graphic | Code  |
+|Chart type | Graphic | Code  |
 |:--- |:--- |:--- |:--- |
-|Column - diverging | ![](column-diverging/thumbnail.png) | [View](https://rcatlord.github.io/Plot/column-diverging) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-diverging) |
+|Column - diverging | [View](https://rcatlord.github.io/Plot/column-diverging) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-diverging) |
