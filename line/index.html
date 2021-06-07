@@ -1,0 +1,74 @@
+<!DOCTYPE html
+<html lang="en">
+	<head>
+		<title>Line chart</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../lib/globalStyle.css" />
+		<style></style>
+		<script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.1"></script>
+	</head>
+	<body>
+
+		<div id="graphic" aria-hidden="true"></div>
+		<h6 id="source"></h6>
+
+		<script>
+			
+            // fix text overplotting
+			d3.csv("data.csv", d3.autoType)
+				.then(data => {
+					console.log(data[0]);
+					var options = {
+						height: 400,
+						width: 700,
+                        marginRight: 30,
+						x: {
+							label: null
+						}, 
+						y: {
+                            tickSize: 0,
+    						tickPadding: 8,
+                            grid: true,
+							label: "%"
+						},
+                        color: {
+							range: ["#206095", "#27A0CC", "#003C57"]
+						},
+						marks: [
+                            Plot.line(data, {
+                                x: "date", 
+                                y: "value", 
+                                z: "group", 
+                                stroke: "group"
+                            }),
+                            Plot.dot(data, {
+                                x: "date", 
+                                y: "value",
+                                fill: "group"
+                            }),
+                            Plot.text(data, Plot.selectLast({
+                                x: "date",
+                                y: "value",
+                                z: "group",
+                                text: "value",
+                                textAnchor: "start",
+                                fontSize: 12,
+                                dx: 5, 
+                                dy: 3
+                            })),
+                            Plot.ruleY([0])
+						]
+					};
+					document.getElementById('graphic').appendChild(Plot.plot(options));
+				});
+		
+			d3.select("#source")
+				.text("Source: Office for National Statistics");
+		
+		</script>
+	</body>
+</html>
