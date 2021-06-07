@@ -1,0 +1,58 @@
+<!DOCTYPE html
+<html lang="en">
+	<head>
+		<title>Grouped column chart</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../lib/globalStyle.css" />
+		<style></style>
+		<script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.1"></script>
+	</head>
+	<body>
+
+		<div id="graphic" aria-hidden="true"></div>
+		<h6 id="source"></h6>
+
+		<script>
+			
+			d3.csv("data.csv", d3.autoType)
+				.then(data => {
+					console.log(data[0]);
+					var options = {
+						height: 400,
+						width: 700,
+						x: {
+							axis: null,
+							label: null
+						}, 
+						y: {
+							domain: [0, 45],
+							grid: true,
+							label: "%"
+						},
+						facet: {
+							data: data, 
+							x: "date"
+						},
+						color: {
+							range: ["#206095", "#118C7B", "#003C57", "#A8BD3A", "27A0CC"]
+						},
+						marks: [
+							Plot.barY(
+								data,
+							Plot.groupX({y: "sum"}, {x: "group", y: "value", fill: "group"})
+							)
+						]
+					};
+					document.getElementById('graphic').appendChild(Plot.plot(options));
+				});
+		
+			d3.select("#source")
+				.text("Source: Source information");
+		
+		</script>
+	</body>
+</html>
