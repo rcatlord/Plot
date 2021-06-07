@@ -1,7 +1,7 @@
 <!DOCTYPE html
 <html lang="en">
 	<head>
-		<title>Diverging column chart</title>
+		<title>Boilerplate</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,39 +22,23 @@
 				.then(data => {
 					console.log(data[0]);
 					var options = {
-						marginLeft: 20,
 						height: 400,
 						width: 700,
 						x: {
-							ticks: d3.ticks(...d3.extent(data, d => d.date), 14),
 							label: null
 						}, 
 						y: {
-							domain: [-3, 6],
-							tickSize: 0,
-    						tickPadding: 3,
-							grid: true,
 							label: "%"
 						},
-						color: {
-							range: ["#118C7B", "#206095"]
-						},
 						marks: [
-                    		Plot.barY(data, {
-								x: "date", 
-								y: "value", 
-								fill: d => [d.value > 0 ? 1 : 0], 
-								title: "value"
-							}),
-							Plot.ruleY([0]),
-							Plot.ruleY([-3])
+
 						]
 					};
 					document.getElementById('graphic').appendChild(Plot.plot(options));
 				});
 		
 			d3.select("#source")
-				.text("Source: Labour Market Statistics, February 2015, Table A02");
+				.text("Source: ");
 		
 		</script>
 	</body>
