@@ -3,10 +3,10 @@ Recreating ONS [Simple-charts](https://github.com/ONSvisual/Simple-charts) in [O
 
 <br/>
 
-|Chart type | Graphic | Code  |
+|Chart type | Compare | Code  |
 |:--- |:--- |:--- |
-|Column - diverging | [View](https://rcatlord.github.io/Plot/column-diverging) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-diverging) |
-|Column - grouped | [View](https://rcatlord.github.io/Plot/column-grouped) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-grouped) |
-|Column - stacked | [View](https://rcatlord.github.io/Plot/column-stacked) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-stacked) |
-|Heatmap | [View](https://rcatlord.github.io/Plot/heatmap) | [`</>`](https://github.com/rcatlord/Plot/tree/master/heatmap) |
-|Line | [View](https://rcatlord.github.io/Plot/line) | [`</>`](https://github.com/rcatlord/Plot/tree/master/line) |
+|Column - diverging | [View](https://rcatlord.github.io/Plot/column-diverging/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-diverging) |
+|Column - grouped | [View](https://rcatlord.github.io/Plot/column-grouped/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-grouped) |
+|Column - stacked | [View](https://rcatlord.github.io/Plot/column-stacked/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-stacked) |
+|Heatmap | [View](https://rcatlord.github.io/Plot/heatmap/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/heatmap) |
+|Line | [View](https://rcatlord.github.io/Plot/line/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/line) |
