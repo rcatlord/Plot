@@ -1,0 +1,78 @@
+group,region,value
+"Manufacturing, maintenance & repair",NE,9.1
+Construction,NE,12.3
+Charges for intellectual property,NE,1.4
+"Telecom, computer, and info services",NE,1
+Research and development services,NE,1.4
+Professional & management consulting,NE,1
+Technical services,NE,1.1
+"Manufacturing, maintenance & repair",NW,19.5
+Construction,NW,6.2
+Charges for intellectual property,NW,9.6
+"Telecom, computer, and info services",NW,3.3
+Research and development services,NW,3.7
+Professional & management consulting,NW,4.4
+Technical services,NW,6
+"Manufacturing, maintenance & repair",YH,5.1
+Construction,YH,6.9
+Charges for intellectual property,YH,1.9
+"Telecom, computer, and info services",YH,2.7
+Research and development services,YH,2.4
+Professional & management consulting,YH,2
+Technical services,YH,1.8
+"Manufacturing, maintenance & repair",EM,5
+Construction,EM,3.6
+Charges for intellectual property,EM,1.5
+"Telecom, computer, and info services",EM,2.9
+Research and development services,EM,6.6
+Professional & management consulting,EM,2.3
+Technical services,EM,1.9
+"Manufacturing, maintenance & repair",WM,5
+Construction,WM,4.3
+Charges for intellectual property,WM,1.5
+"Telecom, computer, and info services",WM,4.1
+Research and development services,WM,2.7
+Professional & management consulting,WM,2.3
+Technical services,WM,1.8
+"Manufacturing, maintenance & repair",EE,5.1
+Construction,EE,5.1
+Charges for intellectual property,EE,9.8
+"Telecom, computer, and info services",EE,4.1
+Research and development services,EE,18.4
+Professional & management consulting,EE,4.4
+Technical services,EE,5
+"Manufacturing, maintenance & repair",LN,6.3
+Construction,LN,23.2
+Charges for intellectual property,LN,52
+"Telecom, computer, and info services",LN,49.7
+Research and development services,LN,13.2
+Professional & management consulting,LN,62.3
+Technical services,LN,13.6
+"Manufacturing, maintenance & repair",SE,30.4
+Construction,SE,16.5
+Charges for intellectual property,SE,16
+"Telecom, computer, and info services",SE,23.3
+Research and development services,SE,41.4
+Professional & management consulting,SE,13.5
+Technical services,SE,32.2
+"Manufacturing, maintenance & repair",SW,6.6
+Construction,SW,5.2
+Charges for intellectual property,SW,2.9
+"Telecom, computer, and info services",SW,4.9
+Research and development services,SW,3.1
+Professional & management consulting,SW,3
+Technical services,SW,12
+"Manufacturing, maintenance & repair",WA,2.9
+Construction,WA,0.9
+Charges for intellectual property,WA,2.1
+"Telecom, computer, and info services",WA,0.6
+Research and development services,WA,1.4
+Professional & management consulting,WA,1.4
+Technical services,WA,6.4
+"Manufacturing, maintenance & repair",SC,4.9
+Construction,SC,15.9
+Charges for intellectual property,SC,1.4
+"Telecom, computer, and info services",SC,3.4
+Research and development services,SC,5.9
+Professional & management consulting,SC,3.3
+Technical services,SC,18.1
