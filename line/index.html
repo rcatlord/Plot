@@ -43,11 +43,13 @@
                                 x: "date", 
                                 y: "value", 
                                 z: "group", 
-                                stroke: "group"
+                                stroke: "group",
+								strokeWidth: 3
                             }),
                             Plot.dot(data, {
                                 x: "date", 
                                 y: "value",
+								r: 4,
                                 fill: "group"
                             }),
                             Plot.text(data, Plot.selectLast({
