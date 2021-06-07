@@ -7,17 +7,49 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="../lib/globalStyle.css" />
-		<style></style>
+		<style>
+			
+			/* Resize legend labels */	
+			div.legend > div {
+				font-family: 'Open Sans', sans-serif!important;
+				font-size:0.7em!important;
+				color: #323132;
+				}
+
+			/* Hide facet label */	
+			#graphic > svg > g:nth-child(2) > text {
+				font-size: 0;
+			}
+
+		</style>
 		<script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.1"></script>
 	</head>
 	<body>
 
+		<div class="legend"></div>
 		<div id="graphic" aria-hidden="true"></div>
 		<h6 id="source"></h6>
 
-		<script>
+		<script type="module">
+			import {Runtime} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+			import d3_colorLegend from "https://api.observablehq.com/@d3/color-legend.js?v=3";
 			
+			// add legend
+			const color = d3.scaleOrdinal()
+				.domain(["Education for under-fives","Primary education","Secondary education","Tertiary education"])
+				.range(["#206095", "#118C7B", "#003C57", "#A8BD3A"])
+			const margin = ({top: 20, right: 30, bottom: 30, left: 55})
+			const legend = document.querySelector(".legend")
+			renderSwatches(legend)
+			async function renderSwatches(el) {
+			  const module = new Runtime().module(d3_colorLegend);
+			  const swatches = await module.value("swatches");
+			  const element = swatches({color, marginLeft: margin.left, columns: "130px"});
+			  el.appendChild(element);
+			}
+			
+			// add graphic
 			d3.csv("data.csv", d3.autoType)
 				.then(data => {
 					console.log(data[0]);
@@ -31,6 +63,8 @@
 						y: {
 							domain: [0, 45],
 							grid: true,
+							tickSize: 0,
+    						tickPadding: 8,
 							label: "%"
 						},
 						facet: {
@@ -38,7 +72,7 @@
 							x: "date"
 						},
 						color: {
-							range: ["#206095", "#118C7B", "#003C57", "#A8BD3A", "27A0CC"]
+							range: ["#206095", "#118C7B", "#003C57", "#A8BD3A"]
 						},
 						marks: [
 							Plot.barY(
