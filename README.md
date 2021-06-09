@@ -4,7 +4,7 @@ Recreating ONS [Simple-charts](https://github.com/ONSvisual/Simple-charts) in [O
 <br/>
 
 |Chart type | Graphic | Compare with D3 | Code  |
-|:--- |:--- |:--- |
+|:--- |:--- |:--- |:--- |
 |Column - diverging | [View](https://rcatlord.github.io/Plot/column-diverging) | [View](https://rcatlord.github.io/Plot/column-diverging/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-diverging) |
 |Column - grouped | [View](https://rcatlord.github.io/Plot/column-grouped) |[View](https://rcatlord.github.io/Plot/column-grouped/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-grouped) |
 |Column - stacked | [View](https://rcatlord.github.io/Plot/column-stacked) | [View](https://rcatlord.github.io/Plot/column-stacked/compare.html) | [`</>`](https://github.com/rcatlord/Plot/tree/master/column-stacked) |
