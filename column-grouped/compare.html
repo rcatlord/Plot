@@ -20,22 +20,18 @@
 	</head>
 	<body>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>D3</h2>
-                    <div>
-                        <div id="d3_graphic"></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h2>Plot</h2>
-                    <div>
-                        <div id="plot_graphic"></div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h2>D3</h2>
+                <div id="d3_graphic"></div>
             </div>
-        </div>
+          </div>
+          <div class="row">
+            <div class="col-6 offset-3">
+                <h2>Plot</h2>
+                <div id="plot_graphic"></div>
+            </div>
+          </div>
 
         <script>
             var pymParent = new pym.Parent('d3_graphic', 'https://onsvisual.github.io/Simple-charts/all-templates/clustered-bar-vertical/', {});
