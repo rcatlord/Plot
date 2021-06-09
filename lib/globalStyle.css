@@ -6,8 +6,8 @@ body {
 }
 
 /* axis tick labels */
-.tick {
-    font-size: 12px;
+.plot {
+    font-size: 14px!important;
     color: #666;
 }
 
