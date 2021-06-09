@@ -17,3 +17,7 @@ body {
     font-weight: 700;
     color: #323132;
 }
+
+.pym {
+    max-width: 650px;
+}
