@@ -23,16 +23,30 @@
 			var graphic = d3.select('#graphic');
 			var pymChild = null;
 
-			function drawGraphic() {
+			function drawGraphic(graphic_width) {
 				
 				graphic.selectAll("*").remove();
-				var margin = { top: 30, right: 40, bottom: 30, left: 40 };
-				var height = 400;
-      			var width = parseInt(d3.select("body").style("width")) - margin.left - margin.right;
+				
+				if (graphic_width == undefined || isNaN(graphic_width)) {
+					graphic_width = 640;
+				}
+
+    			var graphic_aspect_height = 0.8;
+				
+				var margin = {
+					top: 30,
+					right: 40,
+					bottom: 30,
+					left: 40
+				};
+				
+				var width = graphic_width - margin.left - margin.right,
+					height = Math.max((396 - margin.top - margin.bottom), (Math.ceil(width * graphic_aspect_height) - margin.top - margin.bottom));
 				
 			    var options = {
 					height: height,
 					width: width,
+					marginTop: 25,
 					x: {
 						ticks: d3.ticks(...d3.extent(graphic_data, d => d.date), Math.max(width/66,2)),
 						label: null
